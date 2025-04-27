@@ -1,0 +1,15 @@
+.page {
+    border: 4px solid white;
+    padding: 2rem;
+    margin-bottom: 7rem !important
+}
+
+.text-danger {
+    font-size: 0.9rem;
+    margin-top: 4px;
+    display: block;
+}
+
+.is-invalid {
+    border-color: red;
+}

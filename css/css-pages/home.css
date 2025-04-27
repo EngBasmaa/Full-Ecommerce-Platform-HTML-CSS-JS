@@ -1,0 +1,161 @@
+.category-link {
+    transition: all 0.7s ease-in-out;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.category-link:hover .bg-white {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.category-link:hover p {
+    color: rgb(230, 179, 104)
+}
+
+.cat,
+.box {
+    background-color: rgb(240, 229, 216);
+    padding: 2rem 3rem
+}
+
+.swipe {
+    height: 90vh
+}
+
+.swipe img {
+    height: 100%;
+    width: 100%;
+}
+
+.swipe {
+    position: relative;
+}
+
+.image-overlay {
+    position: relative;
+    display: block;
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 70%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* تدرج شفافية الخلفية */
+    padding: 1.5rem 3rem;
+    border-radius: 5px;
+}
+
+.sub-hero {
+    padding: 7rem;
+}
+
+/* ............ */
+
+/* === Contact Us Section === */
+/* === Contact Us Section === */
+#contact-us {
+    background-color: var(--background-color);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#contact-us h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+#contact-us .card {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--secondary-color);
+    transition: box-shadow var(--transition-speed);
+}
+
+#contact-us .card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#contact-us .card-body {
+    padding: 2rem;
+}
+
+#contact-us .form-control {
+    border-radius: var(--border-radius);
+    border: 1px solid var(--secondary-color);
+    padding: 1rem;
+    transition: border-color var(--transition-speed);
+}
+
+#contact-us .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(18, 52, 88, 0.5);
+}
+
+#contact-us .btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: var(--border-radius);
+}
+
+#contact-us .btn-primary:hover {
+    background-color: #0f2d47;
+}
+
+/* Ensure both columns have the same height */
+#contact-us .row.d-flex {
+    display: flex;
+    align-items: stretch;
+}
+
+#contact-us .col-md-6 {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-us .card.h-100 {
+    flex-grow: 1;
+}
+
+@media (max-width: 992px) {
+    .overlay-text {
+        top: 60%;
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .overlay-text {
+        top: 40%;
+        font-size: 1.3rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .overlay-text {
+        top: 30%;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}

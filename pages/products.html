@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- style -->
+    <link rel="stylesheet" href="../css/global.css">
+    <!-- page style -->
+    <link rel="stylesheet" href="../css/css-pages/products.css">
+    <link rel="stylesheet" href="../css/css-pages/navbar.css">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">MyStore.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./products.html">Products</a></li>
+                    <li id="cartLink" class="nav-item" style="display: none;"><a class="nav-link"
+                            href="./cart.html">Cart</a></li>
+                    <li id="registerLink" class="nav-item"><a class="nav-link" href="./register.html">Register</a>
+                    </li>
+                    <li id="loginLink" class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
+                    <li class="nav-item" id="logoutLink" style="display: none;">
+                        <button onclick="logout()" class="btn btn-logout">Logout</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <h2 class="alert alert-primary text-center">All Products</h2> -->
+
+    <!-- Products Section -->
+    <div class="container py-5">
+        <div class="row">
+
+
+            <div class="filter-section">
+                <h1 class="filter-title  text-center">All Products</h1>
+
+                <div class="flex row justify-content-around m-auto my-5">
+                    <!-- Filter Section -->
+                    <div class="col-md-5">
+                        <div class="filter-section bg-light">
+                            <h3 class="filter-title">Categories</h3>
+                            <div id="category-buttons">
+                                <!-- buttons -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- filter prices -->
+                    <div class="filter-section col-md-5 bg-light">
+                        <h3 class="filter-title">Filter by Price</h3>
+                        <label for="min-price">Min Price</label>
+                        <input type="number" id="min-price" class="form-control mb-2" placeholder="Min Price">
+
+                        <label for="max-price">Max Price</label>
+                        <input type="number" id="max-price" class="form-control mb-2" placeholder="Max Price">
+
+                        <button class="btn btn-primary w-100" id="price-filter-btn">Apply Price Filter</button>
+                    </div>
+                </div>
+
+
+                <!-- Products Grid -->
+                <div class="col-md-12">
+                    <div class="row mx-auto justify-content-around g-auto" id="products-container">
+                        <!-- cards of products -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <button id="go-to-top" title="Go to Top">&#8593;</button>
+
+
+
+        <!-- Footer -->
+        <footer class="text-white text-center py-3 position-fixed bottom-0 start-0 end-0">
+            <div class="container">
+                <p class="mb-0">© 2025 MyStore. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- <script src="../js/authorization.js"></script> -->
+        <script src="../app.js"></script>
+        <script src="../js/cartButton.js"></script>
+        <script src="../js/authorization.js"></script>
+        <script src="../js/goUp.js"></script>
+
+
+</body>
+
+</html>

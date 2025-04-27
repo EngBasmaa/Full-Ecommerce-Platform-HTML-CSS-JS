@@ -1,0 +1,210 @@
+:root {
+    --primary-color: #123458;
+    --secondary-color: #D4C9BE;
+    --background-color: #F1EFEC;
+    --text-color: #030303;
+    --light-bg: #ffffff;
+    --border-radius: 0.5rem;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+/* === Typography === */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: #0f2d47;
+}
+
+/* === Buttons === */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition-speed);
+}
+
+.btn-primary:hover {
+    background-color: #0f2d47;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+.btn-secondary:hover {
+    background-color: #c2b9b0;
+}
+
+/* === Navbar === */
+
+
+/* .navbar {
+    background-color: var(--primary-color);
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+} */
+
+.navbar-brand,
+.nav-link {
+    color: #fff !important;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+
+
+/* === Cards === */
+.card {
+    background-color: var(--light-bg);
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    transition: box-shadow var(--transition-speed);
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* === Footer === */
+footer {
+    background-color: var(--primary-color) !important;
+    color: #fff;
+    padding: 0.6rem 0 !important;
+    text-align: center;
+}
+
+/* === Utility Classes === */
+.bg-primary {
+    background-color: var(--primary-color) !important;
+    color: #fff !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary-color) !important;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.text-secondary {
+    color: var(--secondary-color) !important;
+}
+
+.rounded {
+    border-radius: var(--border-radius) !important;
+}
+
+/* Main navbar */
+.custom-navbar {
+    background-color: #0d6efd;
+    /* نفس لون الأزرق */
+    color: #fff;
+    padding: 0.5rem 1rem;
+    position: relative;
+}
+
+.custom-navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Brand */
+.custom-navbar .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+/* Menu Button */
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+    /* نخفية على الديسكتوب */
+}
+
+/* Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ffc107;
+    /* لون أصفر عند الهوفر */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #0d6efd;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        /* نخفيه افتراضياً */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}

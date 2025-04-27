@@ -1,0 +1,74 @@
+/* Image styling */
+#productDetails .product-image {
+    width: 100%;
+    max-width: 400px;
+    /* You can adjust the max-width based on your preference */
+    height: auto;
+}
+
+/* Flexbox to align image and content side by side */
+#productDetails .row {
+    display: flex;
+    align-items: center;
+}
+
+#productDetails .product-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+#productDetails .product-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+#productDetails .description {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+#productDetails .price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+#productDetails .btn {
+    margin-top: 20px;
+}
+
+.swiper {
+    height: 75vh
+}
+
+.swiper-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.swiper-wrapper {
+    height: 100%;
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.swiper-slide {
+    width: 40%;
+    margin: 0 2rem;
+    /* يعرض 3 صور فقط في نفس الوقت */
+    flex-shrink: 0;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 70%;
+}
+
+.box {
+    margin-bottom: 7rem
+}
+
+.btns .btn {
+    width: 6rem
+}

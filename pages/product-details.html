@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- style -->
+    <link rel="stylesheet" href="../css/global.css">
+    <!-- page style -->
+    <link rel="stylesheet" href="../css/css-pages/product-details.css">
+    <link rel="stylesheet" href="../css/css-pages/navbar.css">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">MyStore.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./products.html">Products</a></li>
+                    <li id="cartLink" class="nav-item" style="display: none;"><a class="nav-link"
+                            href="./cart.html">Cart</a></li>
+                    <li id="registerLink" class="nav-item"><a class="nav-link" href="./register.html">Register</a>
+                    </li>
+                    <li id="loginLink" class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
+                    <li class="nav-item" id="logoutLink" style="display: none;">
+                        <button onclick="logout()" class="btn btn-logout">Logout</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h2 class="alert alert-primary text-center">Product Details</h2>
+
+
+
+    <div class="container py-5 px-1 m-auto w-100" id="productDetails">
+        <!-- Product details will be rendered here -->
+    </div>
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-3 position-fixed bottom-0 start-0 end-0">
+        <div class="container">
+            <p class="mb-0">© 2025 MyStore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/authorization.js"></script>
+    <script src="../js/product-details.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script src="../js/cartButton.js"></script>
+
+
+</body>
+
+</html>

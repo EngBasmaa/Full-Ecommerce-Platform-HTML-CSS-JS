@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "backend.js",
+  "scripts": {
+    "sync-data": "node syncData.js",
+    "start": "npm run sync-data && json-server --watch db.json --port 5000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Local server with synced data and JSON Server for mock API",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3",
+    "node-fetch": "^3.3.2"
+  }
+}

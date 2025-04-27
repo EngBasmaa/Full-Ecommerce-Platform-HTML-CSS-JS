@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- style -->
+    <link rel="stylesheet" href="../css/global.css">
+    <!-- page style -->
+    <link rel="stylesheet" href="../css/css-pages/login.css">
+    <link rel="stylesheet" href="../css/css-pages/navbar.css">
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">MyStore.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./products.html">Products</a></li>
+                    <li id="cartLink" class="nav-item" style="display: none;"><a class="nav-link"
+                            href="./pages/cart.html">Cart</a></li>
+                    <li id="registerLink" class="nav-item"><a class="nav-link" href="./register.html">Register</a>
+                    </li>
+                    <li id="loginLink" class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
+                    <li class="nav-item" id="logoutLink" style="display: none;">
+                        <button onclick="logout()" class="btn btn-logout">Logout</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <h4 class="alert alert-success text-center p-1"></h4>
+
+
+
+    <div class="container my-5">
+        <div class="login-container my-5">
+            <!-- <div class="container mt-5"> -->
+            <h2 class="alert text-center p-1" id="loginMessage"></h2>
+            <h2 class="text-center text-primary mb-4">Login</h2>
+
+            <form id="loginForm">
+                <div class="mb-3">
+                    <label for="loginEmail" class="form-label">Email</label>
+                    <input type="text" id="loginEmail" class="form-control" />
+                    <div class="error-msg" id="loginEmailError">Please enter your email.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="loginPassword" class="form-label">Password</label>
+                    <input type="password" id="loginPassword" class="form-control" />
+                    <div class="error-msg" id="loginPasswordError">Please enter your password.</div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+
+
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-3 position-fixed bottom-0 start-0 end-0">
+        <div class="container">
+            <p class="mb-0">© 2025 MyStore. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="../js/Authentication.js" defer></script>
+
+</body>
+
+</html>
