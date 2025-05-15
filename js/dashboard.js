@@ -1,9 +1,16 @@
 window.addEventListener("load", async function() {
+  // const loggedInUser = JSON.parse(sessionStorage.getItem("adminEmail"));
+
+  // if (!loggedInUser) {
+  //   window.location.href = "../pages/login.html"; // Change to your login page URL
+  // } else {
+  //   console.log("User is logged in:", loggedInUser);
+  // }
+
   try {
     const email = sessionStorage.getItem("adminEmail");
 
     if (!email) {
-      // مفيش إيميل محفوظ يعني مش مسجل دخول
       window.location.href = "../pages/login.html";
       return;
     }

@@ -41,45 +41,43 @@
         </div>
     </nav>
 
-    <h2 class="alert text-center p-1 m-1" id="messageBox"></h2>
 
+
+    <h2 class="alert text-center p-1 m-1" id="messageBox"></h2>
 
     <div class="container form w-50 rounded">
         <div class="row">
             <div class="login-container">
                 <h4 class="text-center text-primary mb-4">Create Account</h4>
 
-
-
-                <form id="registerForm">
+                <form id="registerForm" autocomplete="on">
                     <!-- Name -->
                     <div class="mb-3">
                         <label for="name" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="name" />
+                        <input type="text" class="form-control" id="name" autocomplete="name" />
                         <div class="error-msg" id="nameError">Please enter your full name.</div>
                     </div>
 
                     <!-- Email -->
                     <div class="mb-3">
                         <label for="email" class="form-label">Email address</label>
-                        <input type="text" class="form-control" id="email" />
+                        <input type="email" class="form-control" id="email" autocomplete="email" />
                         <div class="error-msg" id="emailError">Please enter a valid email address.</div>
                     </div>
 
                     <!-- Password -->
                     <div class="mb-3">
                         <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" />
+                        <input type="password" class="form-control" id="password" autocomplete="new-password" />
                         <div class="error-msg" id="passwordError">Password must be at least 6 characters.</div>
                     </div>
 
                     <!-- Confirm Password -->
                     <div class="mb-3">
-                        <label for="confirm-password" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="confirmPassword" />
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" autocomplete="new-password" />
                         <div class="error-msg" id="confirmPasswordError">Passwords do not match.</div>
                     </div>
-
 
                     <button type="button" onclick="handleSubmit(event)" class="btn btn-primary w-100"
                         id="submitBtn">Register</button>
@@ -114,10 +112,19 @@
             if (isLoggedIn()) {
                 console.log("welcome, you are logged in.");
             } else {
-                window.location.href = "login.html";
+                // Only redirect if not on the login or register pages
+                if (window.location.pathname !== "/pages/register.html" && window.location.pathname !== "/pages/login.html") {
+                    window.location.href = "login.html";
+                }
             }
         };
 
+        // Add a function to check login status
+        function isLoggedIn() {
+            const cookies = document.cookie.split("; ");
+            const loggedInCookie = cookies.find(cookie => cookie.startsWith("loggedIn="));
+            return loggedInCookie ? loggedInCookie.split("=")[1] === "true" : false;
+        }
     </script>
     <script src="../js/register-validation.js"></script>
     <script src="../js/authorization.js"></script>

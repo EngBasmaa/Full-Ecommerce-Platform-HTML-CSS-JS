@@ -10,16 +10,32 @@ window.addEventListener("load", function() {
     document.getElementById("cartLink").style.display = "none";
     document.getElementById("logoutLink").style.display = "none";
 
-    // نحطه شرط إننا نعمل ريديركت لو مش في صفحة login
+    // Prevent redirection from register page until submission is successful
     if (
-      window.location.pathname.includes("success.html") ||
-      window.location.pathname.includes("checkout.html") ||
-      window.location.pathname.includes("cart.html")
+      window.location.pathname.includes("register.html") &&
+      !localStorage.getItem("registrationSuccessful")
     ) {
-      window.location.href = "login.html";
+      // Do nothing if already on register page and registration is not successful yet
+      return;
     }
   }
 });
+
+// Function to simulate registration process
+function registerUser() {
+  // Simulate registration process (e.g., AJAX request or form validation)
+  let isSuccessful = true; // Change this based on actual registration result
+
+  if (isSuccessful) {
+    // Set a flag in localStorage to indicate successful registration
+    localStorage.setItem("registrationSuccessful", true);
+
+    // Redirect after successful registration
+    window.location.href = "success.html"; // Or wherever you want to redirect
+  } else {
+    alert("Registration failed. Please try again.");
+  }
+}
 
 function isLoggedIn() {
   const cookies = document.cookie.split("; ");
